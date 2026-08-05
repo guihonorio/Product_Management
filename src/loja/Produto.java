@@ -12,7 +12,7 @@ public class Produto {
         this.estoque = estoque;
     }
 
-    // Getters
+    // Get
     public String getNome() {
         return nome;
     }
@@ -25,7 +25,7 @@ public class Produto {
         return estoque;
     }
 
-    // Setters
+    // Set
     public void setNome(String nome) {
         this.nome = nome;
     }
