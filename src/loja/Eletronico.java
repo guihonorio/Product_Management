@@ -4,19 +4,25 @@ public class Eletronico extends Produto {
 
     private int garantia;
 
-    public Eletronico(String nome, double preco, int estoque, int garantia) {
-        super(nome, preco, estoque);
+    // Construtor
+    public Eletronico(String nome, double preco, int estoque,
+                      int garantia, Fornecedor fornecedor) {
+
+        super(nome, preco, estoque, fornecedor);
         this.garantia = garantia;
     }
 
+    // Getter
     public int getGarantia() {
         return garantia;
     }
 
+    // Setter
     public void setGarantia(int garantia) {
         this.garantia = garantia;
     }
 
+    // Método específico
     public void calcularGarantiaRestante(int meses) {
 
         int restante = garantia - meses;
@@ -28,10 +34,10 @@ public class Eletronico extends Produto {
         }
     }
 
+    // Sobrescrita
     @Override
     public void apresentar() {
         super.apresentar();
         System.out.println("Garantia: " + garantia + " meses");
     }
 }
-
